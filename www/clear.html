@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="components/loader.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="home.html">Home</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="#" onclick='nextStamp()'>NEXT</a></li>
+          <li><a href="#" onclick='reset()'>RESET</a></li>
+          <li><a href="#" onclick='window.location.reload()'>RELOAD</a></li>
+          <li>SPOT=<span class="spot"></span></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  <h1 style="color:#ff0000">クリアおめでとう！</h1>
+  <h2 style="color:bluck">また遊びに来てね</h2>
+  <img src="./materials/clear.gif" class="tokushi">
+  <br />
+  <button type="button" 
+    onclick="location.href='./index.html'" 
+    class="btn btn-primary">
+    Top へ
+  </button>
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="components/ip_match.js"></script>
+  <script src="components/stamps.js"></script> 
+  <script src="components/bootstrap.js"></script>
+</body>
+</html>
