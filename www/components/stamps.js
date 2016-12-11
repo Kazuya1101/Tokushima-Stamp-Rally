@@ -10,24 +10,28 @@ if (character == null){
 
 var d_name = "now_" + limit;
 var daishi;
-
+var ar_btn;
 function setLimit(lim){
   localStorage.setItem("limit", lim);
 }
 
 function loadLS(){
   if (localStorage.getItem(d_name) == null){
-    localStorage.setItem(d_name, 1);
+    localStorage.setItem(d_name, 0);
   }
   now = localStorage.getItem(d_name);
   daishi = document.getElementById("daishi");
   if (localStorage.getItem(d_name) == limit){
-    q = '<a href="./clear.html"> <img id="daishi_pic" src="./image/' + character + '/base_' + limit + '/' + limit + '.gif"> </a>';
+    q = '<a href="./clear.html"> <img id="daishi_pic" src="./image/' + character + '/limit_' + limit + '/' + limit + '.gif"> </a>';
   }
   else{
-    q = '<img id="daishi_pic" src="./image/' + character + '/base_' + limit + '/' + now + '.gif">';
+    q = '<img id="daishi_pic" src="./image/' + character + '/limit_' + limit + '/' + now + '.gif">';
   }
   daishi.innerHTML = q;
+  
+  var now_str = "" + now;
+  ar_btn = document.getElementById("ar_btn");
+  ar_btn.innerHTML = "<br><button type='button' onclick=\"location.href='./page1.html?key=" + now_str + "'\" class='btn btn-primary'>AR</button>";
 }
 
 
@@ -40,6 +44,7 @@ function nextDaishi() {
     c = c + 1;
   }
   localStorage.setItem(chara_name, c);
+  localStorage.setItem(d_name, 0);
 }
 
 function nextStamp() {
